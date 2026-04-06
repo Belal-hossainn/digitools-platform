@@ -20,7 +20,7 @@ bg-clip-text text-transparent">DigiTools</h1>
             {cart.length}
           </span>
           </div>
-          <div>
+          <div className="hidden md:flex gap-4">
             <button >Login</button>
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-purple-500 hover:to-blue-500 text-white px-4 py-2 mx-2 rounded-4xl">
             Get Started

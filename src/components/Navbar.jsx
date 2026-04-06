@@ -1,5 +1,4 @@
-
-const Navbar = () => {
+const Navbar = ({cart}) => {
   return (
     <div className="py-3 mx-auto border-b border-b-gray-200 max-w-6xl">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -18,6 +17,7 @@ bg-clip-text text-transparent">DigiTools</h1>
           <div className="relative mt-2">
             <img className="w-7 h-7" src="https://i.ibb.co.com/zHLZKm71/shoping-cart.png" alt="Cart" />
           <span className="absolute -top-2 -right-2  text-xs px-2 rounded-full">
+            {cart.length}
           </span>
           </div>
           <div>

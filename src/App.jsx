@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import Steps from "./components/Steps";
 import Package from "./components/Package";
 import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -65,6 +66,7 @@ function App() {
       <Steps stepsPromise={stepsPromise} />
       <Package packagesPromise={packagesPromise} />
       <CTA />
+      <Footer/>
       <ToastContainer />
     </>
   );

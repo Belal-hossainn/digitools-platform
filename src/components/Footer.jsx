@@ -1,10 +1,7 @@
 const Footer = () => {
   return (
     <div className="bg-[#0B1120] text-gray-300 pt-20 pb-10">
-
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-10">
-
-        {/* Logo */}
         <div>
           <h2 className="text-white text-2xl font-bold">DigiTools</h2>
           <p className="mt-4 text-sm text-gray-400 leading-relaxed">
@@ -12,8 +9,6 @@ const Footer = () => {
             Work smarter with our suite of powerful tools.
           </p>
         </div>
-
-        {/* Columns */}
         <div>
           <h3 className="text-white font-semibold mb-3">Product</h3>
           <ul className="space-y-2 text-sm">
@@ -61,14 +56,12 @@ const Footer = () => {
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between text-sm text-gray-400">
         <p>© 2026 Digitools. All rights reserved.</p>
-
         <div className="flex gap-6 mt-4 md:mt-0">
           <span>Privacy Policy</span>
           <span>Terms of Service</span>
           <span>Cookies</span>
         </div>
       </div>
-
     </div>
   );
 };

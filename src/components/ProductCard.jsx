@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ product, addToCart }) => {
+  const [isSelected, setIsSelected] = useState(false);
+ const handleSelectCard =() => {  addToCart(product);
+  toast.success(`${product.name} added to cart!`);
+  setIsSelected(true);
+ }
+  console.log(isSelected);
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-6 relative w-[320px] shadow-sm">
       <span className={`absolute top-4 right-4 ${product.badge === 'Best Seller' ? 'bg-orange-100 text-orange-500' : product.badge === 'Popular' ? 'bg-blue-100 text-blue-500' : 'bg-green-100 text-green-500'} text-xs px-3 py-1 rounded-full font-medium`}>
@@ -15,7 +22,6 @@ const ProductCard = ({ product, addToCart }) => {
       <p className="text-gray-500 text-sm leading-relaxed mb-4">
         {product.description}
       </p>
-
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         ${product.price}<span className="text-sm text-gray-500 font-medium">/{product.period}</span>
       </h3>
@@ -27,17 +33,13 @@ const ProductCard = ({ product, addToCart }) => {
             {f}
           </li>
         ))}
-
       </ul>
-
      <button 
-        onClick={() => {
-          addToCart(product);
-          toast.success("Added to cart");
-        }}
+        onClick={handleSelectCard}
+        disabled={isSelected}
         className="w-full py-3 rounded-full text-white font-medium bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 transition  text-center cursor-pointer"
       >
-        Buy Now
+        {isSelected ? "Added to Cart" : "Buy Now"}
       </button>
     </div>
   );

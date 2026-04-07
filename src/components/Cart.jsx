@@ -3,9 +3,13 @@ import { toast } from "react-toastify";
 const Cart = ({ cart, removeItem, clearCart }) => {
    const total = cart.reduce((sum, item) => sum + item.price, 0);
   return (
-    <div className="p-6 text-amber-600">
+    <div className="p-6 text-amber-600 font-medium text-center text-3xl">
       {cart.length === 0 ? (
-        <p>Cart is empty</p>
+       <div className="flex flex-col opacity-50 gap-2 items-center">
+        <img className="w-[150px] h-[150px] " src="https://i.ibb.co.com/zHLZKm71/shoping-cart.png" alt="" srcset="" />
+         <p className="text-xl">Your cart is empty</p>
+       </div>
+
       ) : (
         <>
           <div className="border rounded-2xl p-6 bg-white shadow-sm">
@@ -23,7 +27,6 @@ const Cart = ({ cart, removeItem, clearCart }) => {
                 <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-lg">
                   <img src={item.icon} alt={item.name} className="w-5 h-5" />
                 </div>
-
                 <div>
                   <h3 className="font-medium text-gray-800">
                     {item.name}

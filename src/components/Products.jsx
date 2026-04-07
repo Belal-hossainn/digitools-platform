@@ -5,7 +5,7 @@ const Products = ({ productsPromise, addToCart }) => {
     const products = use(productsPromise);
 
   return (
-    <div className="grid md:grid-cols-3 gap-6 px-6  justify-between items-center mx-auto max-w-6xl">
+    <div className="grid md:grid-cols-3 gap-6 px-6 mb-3  justify-between items-center mx-auto container">
       {products.map((p) => (
         <ProductCard key={p.id} product={p} addToCart={addToCart}  />
       ))}

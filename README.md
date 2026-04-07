@@ -1,16 +1,26 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project name:  Digitools Platform
 
-Currently, two official plugins are available:
+> A modern web application that helps users explore digital tools and manage purchases easily with a clean and interactive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 About The Project
 
-## React Compiler
+Digitools is a React-based web application designed to showcase various digital products and allow users to add them to a cart and remove from cart easily. It focuses on performance, clean UI, and a smooth user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+* ⚛️ React.js
+* 🎨 Tailwind CSS
+* 📦 JavaScript (ES6+)
+* 🔥 React Hooks (useState, Suspense, use)
+* 🔥 React toastify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* 🛍️ View all available digital tools dynamically
+* 🛒 Easily add/remove items from cart
+* ⚡ Optimized data fetching using modern React
+* ⚡ toggling features
+
+
+

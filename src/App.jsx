@@ -8,10 +8,10 @@ import Steps from "./components/Steps";
 import Package from "./components/Package";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CTA from "./components/CTA";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const fetchProducts = async () => {
   const res = await fetch("/product.json");
@@ -34,10 +34,10 @@ function App() {
   
   const [cart, setCart] = useState([]);
   const [view, setView] = useState("products");
-
   const addToCart = (product) => {
     setCart([...cart, product]);
-  };
+  }
+
 
   const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
@@ -52,17 +52,15 @@ function App() {
       <Navbar cart={cart} />
       <Banner />
       <Stats />
-
       <Toggle view={view} setView={setView} cartCount={cart.length} />
 
       {view === "products" ? (
-        <Suspense fallback={<div className="text-center py-10">Loading products...</div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <Products productsPromise={productsPromise} addToCart={addToCart} />
         </Suspense>
       ) : (
-        <Cart cart={cart} removeItem={removeItem} clearCart={clearCart}  />
+        <Cart cart={cart} removeItem={removeItem} clearCart={clearCart} />
       )}
-
       <Steps stepsPromise={stepsPromise} />
       <Package packagesPromise={packagesPromise} />
       <CTA />

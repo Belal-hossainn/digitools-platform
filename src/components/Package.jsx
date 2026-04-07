@@ -3,13 +3,13 @@ const Package = ({ packagesPromise }) => {
   const packeges =use(packagesPromise);
   console.log(packeges);
   return (
-    <div className="py-20 text-center mx-auto max-w-6xl px-6">
-      <h2 className="text-3xl font-bold">Simple Transparent Pricinig</h2>
+    <div className="py-12 text-center mx-auto px-6 container">
+      <h2 className=" text-2xl md:text-3xl font-bold">Simple, Transparent Pricinig</h2>
       <p>Chose the Plans that fits your needs, upgrade anytime.</p>
 
       <div className="grid md:grid-cols-3 gap-8 mt-10 max-w-7xl mx-auto px-6">
 
-        {packeges.map((plan) => (
+        {packeges.map((plan) => ( 
           <div className={`p-8 rounded-xl shadow flex flex-col relative justify-around text-left ${plan.most_popular === true ? " bg-gradient-to-r from-blue-500 to-purple-500 text-white " : " bg-gray-50"}`}>
             <span className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 text-xs px-3 py-1 rounded-full font-medium ${plan.most_popular === true ? 'bg-orange-100 text-orange-400' : 'hidden'} `}>
         Most Popular
@@ -30,7 +30,6 @@ const Package = ({ packagesPromise }) => {
               ))}
             </ul>
             </div>
-            
             <div>
               <button className={`mt-6 px-4 py-2 rounded-4xl w-full ${plan.most_popular === true ? "bg-white text-blue-500" : "bg-gradient-to-r from-blue-500 to-purple-500 text-white"}`}>
               Choose Plan
